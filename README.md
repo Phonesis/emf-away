@@ -1,4 +1,4 @@
-# vue-weather
+# emf-away
 
 ## Project setup
 ```
