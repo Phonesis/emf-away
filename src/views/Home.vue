@@ -65,6 +65,7 @@
     margin-right: auto;
     padding: 2px;
     width: 250px;
+    border-radius: 50%;
   }
 
   .grid-container {

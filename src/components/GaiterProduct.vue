@@ -1,15 +1,18 @@
 <template>
   <div class="gaiter-card">
-    <img src="../assets/gaiter-pic.jpg" alt="gaiter" class="gaiter-pic" width = "115" height = "126"/>
+      <img src="../assets/gaiter-pic.jpg" alt="gaiter" class="gaiter-pic" width = "115" height = "126"/>
     <div
       class="gaiter-info"
     >
       <h2 class="gaiter-title">
         {{ productName }}
       </h2>
-      <div class="gaiter-link">
-        <a :href="link" class="button" target="_blank">Buy on Etsy</a>
-      </div><br>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="gaiter-link">
+          <a :href="link" class="button" target="_blank">Buy on Etsy</a>
+        </div><br>
+      </div>
     </div>
   </div>
 </template>
@@ -50,5 +53,20 @@ export default class GaiterProduct extends Vue {
   }
   h2 {
     width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #a9b5b9;
+  }
+  .container:hover .overlay {
+    opacity: 0.8;
   }
 </style>

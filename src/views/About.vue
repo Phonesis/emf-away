@@ -4,7 +4,7 @@
       <img :src="image" alt="EMF-Away"/><br><br>
       <img class="profile-pic" :src="profileImage" alt="Profile Pic"/><br>
       <h1>My name is Julia and I create EMF protective clothing :) I am a fiber artist and Textile Designer/maker, based in South of England. 💜☀️</h1>
-      <a href="https://twitter.com/missjulia_ann" target="_blank">Follow me on Twitter</a><br><br><br>
+      <a href="https://twitter.com/missjulia_ann" target="_blank">Follow me on Twitter</a><br><br><br><br>
     </main>
   </div>
 

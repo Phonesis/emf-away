@@ -7,10 +7,12 @@
       <h2 class="sock-title">
         {{ productName }}
       </h2>
-      <slot></slot>
-      <div class="sock-link">
-        <a :href="link" class="button" target="_blank">Buy on Etsy</a>
-      </div><br>
+      <div class="container">
+        <div class="overlay"></div>
+        <div class="sock-link">
+          <a :href="link" class="button" target="_blank">Buy on Etsy</a>
+        </div><br>
+      </div>
     </div>
   </div>
 </template>
@@ -50,5 +52,20 @@ export default class SockProduct extends Vue {
   }
   h2 {
     width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #a9b5b9;
+  }
+  .container:hover .overlay {
+    opacity: 0.8;
   }
 </style>
