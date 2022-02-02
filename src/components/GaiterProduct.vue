@@ -1,16 +1,19 @@
 <template>
   <div class="gaiter-card">
-      <img src="../assets/gaiter-pic.jpg" alt="gaiter" class="gaiter-pic" width = "115" height = "126"/>
+      <img src="../assets/gaiter-pic.jpg" alt="gaiter" class="gaiter-pic" width = "150" height = "200"/>
     <div
       class="gaiter-info"
-    >
+    ><br>
       <h2 class="gaiter-title">
         {{ productName }}
       </h2>
+      <h2 class="gaiter-price">
+        {{ price }}
+      </h2><br>
       <div class="container">
         <div class="overlay"></div>
         <div class="gaiter-link">
-          <a :href="link" class="button" target="_blank">Buy on Etsy</a>
+          <a :href="link" class="button" title="View product on Etsy" target="_blank">Buy on Etsy</a>
         </div><br>
       </div>
     </div>
@@ -24,13 +27,13 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class GaiterProduct extends Vue {
     @Prop() private productName!: string;
     @Prop() private link!: string;
+    @Prop() private price!: string;
 }
 </script>
 
 <style>
   .gaiter-card {
     z-index: 100;
-    width: 50%;
     height: 30;
     display: block;
     margin-left: auto;
@@ -38,8 +41,12 @@ export default class GaiterProduct extends Vue {
   }
   .gaiter-pic {
     z-index: 100;
-    width: 50%;
     border: 5px solid #555;
+  }
+  .button:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
   }
   .button {
     background-color: #4CAF50;

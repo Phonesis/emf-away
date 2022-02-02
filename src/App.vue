@@ -1,10 +1,14 @@
 <template>
   <div id="app">
+    <br><img class="logo" :src="image" alt="EMF-Away"/>
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <a href="https://www.etsy.com/uk/shop/EMFAWAY" title="View my Etsy Store" target="_blank">Etsy Store</a><br>
     </div>
-    <router-view/>
+  <transition name="fade">
+    <router-view></router-view>
+  </transition>
   </div>
 </template>
 
@@ -28,20 +32,43 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #302e86;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2px;
+  width: 250px;
+  border-radius: 10%;
 }
 
 #nav {
   padding: 30px;
+  color: #302e86;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #302e86;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: green
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 
 </style>

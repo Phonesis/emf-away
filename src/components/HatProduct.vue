@@ -1,16 +1,19 @@
 <template>
   <div class="hat-card">
-    <img src="../assets/hat-pic.jpg" alt="hat" class="hat-pic" width = "115" height = "126"/>
+    <img src="../assets/hat-pic.jpg" alt="hat" class="hat-pic" width = "150" height = "200"/>
     <div
       class="hat-info"
-    >
+    ><br>
       <h2 class="hat-title">
         {{ productName }}
       </h2>
+      <h2 class="hat-price">
+        {{ price }}
+      </h2><br>
       <div class="container">
         <div class="overlay"></div>
         <div class="hat-link">
-          <a :href="link" class="button" target="_blank">Buy on Etsy</a>
+          <a :href="link" class="button" title="View product on Etsy" target="_blank">Buy on Etsy</a>
         </div><br>
       </div>
     </div>
@@ -24,13 +27,13 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class HatProduct extends Vue {
     @Prop() private productName!: string;
     @Prop() private link!: string;
+    @Prop() private price!: string;
 }
 </script>
 
 <style>
   .hat-card {
     z-index: 100;
-    width: 50%;
     height: 30;
     display: block;
     margin-left: auto;
@@ -38,7 +41,6 @@ export default class HatProduct extends Vue {
   }
   .hat-pic {
     z-index: 100;
-    width: 50%;
     border: 5px solid #555;
   }
   .button {
