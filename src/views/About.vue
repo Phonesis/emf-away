@@ -39,7 +39,7 @@
 <style>
   h1 {
     font-size: medium;
-    color: beige;
+    color: #302e86;
     font-family: Arial, Helvetica, sans-serif
   }
   .profile-pic {
@@ -53,8 +53,5 @@
   }
   .twitter-pic, .mail-icon {
     width: 50px;
-  }
-  #html {
-    background-color: rgb(3, 3, 3);
   }
 </style>

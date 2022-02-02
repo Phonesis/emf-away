@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <main>
-      <h2>I create clothing designed to help protect you and your family against the potentially harmful effects of EMF (Electric & Magnetic Fields) exposure. <br> <br> Here are some of my latest offerings available to buy on Etsy (links will open in a new tab):</h2><br>
+      <h4>I create clothing designed to help protect you and your family against the potentially harmful effects of EMF (Electric & Magnetic Fields) exposure. <br> <br> Here are some of my latest offerings available to buy on Etsy (links will open in a new tab):</h4><br>
       <div v-if="!isMobile()">
         <div class="grid-container">
           <div class="grid-item"> 
@@ -171,6 +171,12 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
+  h4 {
+    font-size: medium;
+    color: #302e86;
+    font-family: Avenir, Helvetica, Arial, sans-serif; position: relative;
+  }
+
   body {
     font-family: sans-serif;
   }
@@ -180,29 +186,8 @@
     opacity: 0.2;
   }
 
-  .speech-bubble {
-    position: relative;
-    background: #728283;
-    border-radius: .4em;
-  }
-
-  .speech-bubble:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: 35px solid transparent;
-    border-top-color: #728283;
-    border-bottom: 0;
-    border-right: 0;
-    margin-left: -17.5px;
-    margin-bottom: -35px;
-  }
-
   #app {
-    background-color: rgb(3, 3, 3);
+    background-color: rgb(214, 205, 205);
     background-size:auto;
   }
 </style>
