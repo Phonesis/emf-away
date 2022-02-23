@@ -2,7 +2,8 @@
   <div class="about">
     <main>
       <br><img class="profile-pic" :src="profileImage" alt="Profile Pic"/><br><br>
-      <h1>My name is Julia and I create protective silver based clothing to help shield you against harmful EMFs (Electric & Magnetic Fields) <br> <br> I am a fiber artist and textile designer/maker, based in the South of England. 💜☀️</h1><br><br>
+      <h1>My name is Julia and I create protective silver based clothing to help shield you against harmful EMFs (Electric & Magnetic Fields) <br> <br> I am a fiber artist and textile designer/maker, based in the South of England. 💜☀️</h1><br>
+      <h1>You can find out even more about me in my Etsy bio <a href="https://www.etsy.com/uk/shop/EMFAWAY?ref=simple-shop-header-name&listing_id=1108536877" target="blank">here</a></h1><br><br>
       <img class="mail-icon" :src="mailIcon" alt="Mail"/>
       <a href="mailto:emf-away@hotmail.com?subject=EMF Away query">Got a query? Drop me an email</a><br><br>
       <img class="twitter-pic" :src="twitterPic" alt="Twitter"/>

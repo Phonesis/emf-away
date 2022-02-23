@@ -28,6 +28,14 @@
             />
           <h3>I have been very fortunate to obtain a small stock of Grounding socks. <br> <br> Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons.</h3>
           </div>
+          <div class="grid-item"> 
+            <HoodieProduct 
+              productName="Ladies EMF Protective Black Zip Hoodie" 
+              price="£145 / $196" 
+              link="https://www.etsy.com/uk/listing/1173926627/ladies-emf-protective-black-zip-hoodie?click_key=f1665214fac158dcc590965e0c71e775e040c586%3A1173926627&click_sum=97c7b758&ref=shop_home_recs_4"
+            />
+          <h3>EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs.<br><br> Comfortable, looks good, and will keep you protected.<br></h3>
+          </div>
         </div>
       </div>
       <div v-else>
@@ -56,6 +64,14 @@
             />
           <h3>I have been very fortunate to obtain a small stock of Grounding socks. <br> <br> Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons.</h3>
           </div>
+          <div class="grid-item-mob"> 
+            <HoodieProduct 
+              productName="Ladies EMF Protective Black Zip Hoodie" 
+              price="£145 / $196" 
+              link="https://www.etsy.com/uk/listing/1173926627/ladies-emf-protective-black-zip-hoodie?click_key=f1665214fac158dcc590965e0c71e775e040c586%3A1173926627&click_sum=97c7b758&ref=shop_home_recs_4"
+            />
+          <h3>EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs.<br><br> Comfortable, looks good, and will keep you protected.<br></h3>
+          </div>
         </div>
       </div>
     </main>
@@ -67,13 +83,15 @@
   import HatProduct from '../components/HatProduct.vue'
   import GaiterProduct from '../components/GaiterProduct.vue'
   import SockProduct from '../components/SockProduct.vue'
+  import HoodieProduct from '../components/HoodieProduct.vue'
 
   export default {
     name: 'App',
     components:{
       HatProduct,
       GaiterProduct,
-      SockProduct
+      SockProduct,
+      HoodieProduct
     },
     data () {
       return {
