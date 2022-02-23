@@ -23,7 +23,7 @@
           <div class="grid-item"> 
             <SockProduct 
               productName="Silver Fibre Grounding Socks" 
-              price="£12 / $16" 
+              price="£24 / $32" 
               link="https://www.etsy.com/uk/listing/1108605007/26-pure-silver-fibre-grounding-socks?click_key=582545ea6ea46a19e0dd1179b5460806a2de0d95%3A1108605007&click_sum=7f701372&ref=shop_home_recs_3&frs=1&cns=1"
             />
           <h3>I have been very fortunate to obtain a small stock of Grounding socks. <br> <br> Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons.</h3>
@@ -51,7 +51,7 @@
           <div class="grid-item-mob"> 
             <SockProduct 
               productName="Silver Fibre Grounding Socks" 
-              price="£12 / $16" 
+              price="£24 / $32" 
               link="https://www.etsy.com/uk/listing/1108605007/26-pure-silver-fibre-grounding-socks?click_key=582545ea6ea46a19e0dd1179b5460806a2de0d95%3A1108605007&click_sum=7f701372&ref=shop_home_recs_3&frs=1&cns=1"
             />
           <h3>I have been very fortunate to obtain a small stock of Grounding socks. <br> <br> Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons.</h3>
