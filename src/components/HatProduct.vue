@@ -68,7 +68,4 @@ export default class HatProduct extends Vue {
     transition: .5s ease;
     background-color: #a9b5b9;
   }
-  .container:hover .overlay {
-    opacity: 0.8;
-  }
 </style>
