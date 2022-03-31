@@ -29,8 +29,8 @@
           <h3>I have been very fortunate to obtain a small stock of Grounding socks. <br> <br> Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons.</h3>
           </div>
           <div class="grid-item"> 
-            <HoodieProduct 
-              productName="Ladies EMF Protective Black Zip Hoodie" 
+            <HoodieProduct Zip
+              productName="Ladies EMF Protective Hoodie" 
               price="£145 / $196" 
               link="https://www.etsy.com/uk/listing/1173926627/ladies-emf-protective-black-zip-hoodie?click_key=f1665214fac158dcc590965e0c71e775e040c586%3A1173926627&click_sum=97c7b758&ref=shop_home_recs_4"
             />
@@ -66,7 +66,7 @@
           </div>
           <div class="grid-item-mob"> 
             <HoodieProduct 
-              productName="Ladies EMF Protective Black Zip Hoodie" 
+              productName="Ladies EMF Protective Hoodie" 
               price="£145 / $196" 
               link="https://www.etsy.com/uk/listing/1173926627/ladies-emf-protective-black-zip-hoodie?click_key=f1665214fac158dcc590965e0c71e775e040c586%3A1173926627&click_sum=97c7b758&ref=shop_home_recs_4"
             />
@@ -118,9 +118,9 @@
   }
 
   .grid-container {
-    display: inline-grid;
-    grid-template-columns: auto auto auto;
-    background-color: #95adc0;
+    display: grid;
+    grid-template-columns:auto auto auto auto;
+    background-color: #95c099;
     padding: 3px;
   }
   .grid-item {
