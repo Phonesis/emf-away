@@ -132,6 +132,18 @@
     position:relative;
   }
 
+  @media only screen and (max-width: 1400px) {
+    .grid-container {
+      grid-template-columns: auto auto;
+    }
+  }
+
+    @media only screen and (max-width: 700px) {
+    .grid-container {
+      grid-template-columns: auto;
+    }
+  }
+
   @media (min-width:1500px) { 
     .grid-item {
       height: 45vw;
@@ -140,7 +152,7 @@
 
   .grid-container-mob {
     display: grid;
-    background-color: #95adc0;
+    background-color: #95c099;
     padding: 3px;
     box-sizing: border-box;
     width: 100%;
