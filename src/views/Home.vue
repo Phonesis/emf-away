@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <main>
-      <h4>I create clothing designed to help protect you and your family against the potentially harmful effects of EMF (Electric & Magnetic Fields) exposure. <br> <br> Here are some of my latest offerings available to buy on Etsy (links will open in a new tab):</h4><br>
+      <h4>I create clothing designed to help protect you and your family against the potentially harmful effects of EMF (Electric & Magnetic Fields) exposure. <br> <br> Here are some of my latest creations available to buy on Etsy (links will open in a new tab):</h4><br>
       <div v-if="!isMobile()">
         <div class="grid-container">
           <div class="grid-item"> 
