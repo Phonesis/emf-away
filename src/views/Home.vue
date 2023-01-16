@@ -1,78 +1,41 @@
 <template>
   <div id="app">
     <main>
-      <h4>I create clothing designed to help protect you and your family against the potentially harmful effects of EMF (Electric & Magnetic Fields) exposure. <br> <br> Here are some of my latest creations available to buy on Etsy (links will open in a new tab):</h4><br>
-      <div v-if="!isMobile()">
-        <div class="grid-container">
-          <div class="grid-item"> 
-            <HatProduct 
-              productName="Silver EMF Protective Hat/Beanie" 
-              price="£48.00" 
-              link="https://www.etsy.com/uk/listing/1070907542/silver-emf-protective-hat?click_key=68580ea1f31826d3efe634c8a28f8f63f8ea3344%3A1070907542&click_sum=ec70b4d0&ref=shop_home_active_1&frs=1&sca=1"
-            />
-            <h3>This is a hat designed to be worn under any other hats. It is pure silver coated fabric that has a shielding efficiency of >55DB or more.<br><br> It is EMF shielding and also has anti bacterial, conductive, healing and anti-radiation functions, which can help protect against 5G.</h3>
-          </div>
-          <div class="grid-item"> 
-            <GaiterProduct 
-              productName="Silver EMF Protective Gaiter" 
-              price="£39.00" 
-              link="https://www.etsy.com/uk/listing/1108536877/silver-emf-protective-gaiter?click_key=3d95a2e07a3b2e28930259690037a5537ba90dfc%3A1108536877&click_sum=67a3754a&ref=shop_home_recs_2&frs=1&sca=1"
-            />
-          <h3>This Multi purpose silver snood will keep those EMFs away this winter whilst protecting your Thyroid and keeping your neck warm. <br><br> We love this Silver snood. The larger fit can also be worn over your face if necessary and even over the head. Fabric is anti-viral and Anti-bacterial and helps with circulation not to mention how pretty it makes anyone look!</h3>
-          </div>
-          <div class="grid-item"> 
-            <SockProduct 
-              productName="Silver Fibre Grounding Socks" 
-              price="£24.00" 
-              link="https://www.etsy.com/uk/listing/1108605007/26-pure-silver-fibre-grounding-socks?click_key=582545ea6ea46a19e0dd1179b5460806a2de0d95%3A1108605007&click_sum=7f701372&ref=shop_home_recs_3&frs=1&cns=1"
-            />
-          <h3>I have been very fortunate to obtain a small stock of Grounding socks. <br> <br> Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons.</h3>
-          </div>
-          <div class="grid-item"> 
-            <HoodieProduct Zip
-              productName="Ladies EMF Protective Hoodie" 
-              price="£155.00" 
-              link="https://www.etsy.com/uk/listing/1173926627/ladies-emf-protective-black-zip-hoodie?click_key=f1665214fac158dcc590965e0c71e775e040c586%3A1173926627&click_sum=97c7b758&ref=shop_home_recs_4"
-            />
-          <h3>EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs.<br><br> Comfortable, looks good, and will keep you protected.<br></h3>
-          </div>
-        </div>
+      <h4>I create clothing designed to help protect you and your family against the potentially harmful effects of EMF (Electric & Magnetic Fields) exposure. <br> <br> Here are some of my latest creations available to buy via my store or through Etsy (links will open in a new tab):</h4><br>
+      <div class="cart">
+        <div>Items in Cart: {{cart.length}}</div>
+        <div>Total: £{{ cart.reduce((totalPrice, item) => totalPrice + item.price, 0 ).toFixed(2)}}</div>
+        <button @click="refreshCart()">Refresh Cart</button>
+        <h4>Checkout</h4><br>
       </div>
-      <div v-else>
-        <div class="grid-container-mob">
-          <div class="grid-item-mob"> 
-            <HatProduct 
-              productName="Silver EMF Protective Hat/Beanie" 
-              price="£48.00" 
-              link="https://www.etsy.com/uk/listing/1070907542/silver-emf-protective-hat?click_key=68580ea1f31826d3efe634c8a28f8f63f8ea3344%3A1070907542&click_sum=ec70b4d0&ref=shop_home_active_1&frs=1&sca=1"
-            />
-            <h3>This is a hat designed to be worn under any other hats. It is pure silver coated fabric that has a shielding efficiency of >55DB or more.<br><br> It is EMF shielding and also has anti bacterial, conductive, healing and anti-radiation functions, which can help protect against 5G.</h3>
-          </div>
-          <div class="grid-item-mob"> 
-            <GaiterProduct 
-              productName="Silver EMF Protective Gaiter" 
-              price="£39.00" 
-              link="https://www.etsy.com/uk/listing/1108536877/silver-emf-protective-gaiter?click_key=3d95a2e07a3b2e28930259690037a5537ba90dfc%3A1108536877&click_sum=67a3754a&ref=shop_home_recs_2&frs=1&sca=1"
-            />
-          <h3>This Multi purpose silver snood will keep those EMFs away this winter whilst protecting your Thyroid and keeping your neck warm. <br><br> We love this Silver snood. The larger fit can also be worn over your face if necessary and even over the head. Fabric is anti-viral and Anti-bacterial and helps with circulation not to mention how pretty it makes anyone look!</h3>
-          </div>
-          <div class="grid-item-mob"> 
-            <SockProduct 
-              productName="Silver Fibre Grounding Socks" 
-              price="£24.00" 
-              link="https://www.etsy.com/uk/listing/1108605007/26-pure-silver-fibre-grounding-socks?click_key=582545ea6ea46a19e0dd1179b5460806a2de0d95%3A1108605007&click_sum=7f701372&ref=shop_home_recs_3&frs=1&cns=1"
-            />
-          <h3>I have been very fortunate to obtain a small stock of Grounding socks. <br> <br> Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons.</h3>
-          </div>
-          <div class="grid-item-mob"> 
-            <HoodieProduct 
-              productName="Ladies EMF Protective Hoodie" 
-              price="£155.00" 
-              link="https://www.etsy.com/uk/listing/1173926627/ladies-emf-protective-black-zip-hoodie?click_key=f1665214fac158dcc590965e0c71e775e040c586%3A1173926627&click_sum=97c7b758&ref=shop_home_recs_4"
-            />
-          <h3>EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs.<br><br> Comfortable, looks good, and will keep you protected.<br></h3>
-          </div>
-        </div>
+      <div class="grid-container">
+        <h3 class="grid-item" v-for="item in items" :key="item.id">
+          <img :src="getImgUrl(item.picName)" v-bind:alt=item.picName class="pic" width = "150" height = "200"/><br>
+          <h2>{{ item.name }} - {{ '£' + item.price }}</h2> <br>
+          <h3>{{ item.description }}</h3><br>
+          <div v-if="item.shortName === 'socks'"><br></div>
+          <div v-if="item.shortName === 'hoodie'"><br><br></div>
+          <h5 class="inner-grid-item">
+            <h5 class ="sizes">
+              <h3>Size Options:</h3><br>
+                <div v-if="item.shortName !== 'socks'">
+                  <h2>Small</h2><button class="clickable" @click="addToCart(item, 'small')">Add to Cart</button>
+                  <br><br><h2>Medium</h2><button class="clickable" @click="addToCart(item, 'medium')">Add to Cart</button>
+                  <br><br><h2>Large</h2><button class="clickable" @click="addToCart(item, 'large')">Add to Cart</button><br>
+                </div>
+                <div v-else>
+                  <h2>Standard</h2><button class="clickable" @click="addToCart(item, 'standard')">Add to Cart</button>
+                </div>
+              <br>
+              <h2>Or</h2>
+              <div class="container">
+                  <div class="sock-link">
+                    <a href="http://www.google.com" class="button" title="View product on Etsy" target="_blank">Buy on Etsy</a>
+                </div><br>
+              </div>
+            </h5>
+          </h5>
+        </h3>
       </div>
     </main>
   </div>
@@ -80,22 +43,33 @@
 
 <script>
   import image from "../assets/logo-emf.jpg"
-  import HatProduct from '../components/HatProduct.vue'
-  import GaiterProduct from '../components/GaiterProduct.vue'
-  import SockProduct from '../components/SockProduct.vue'
-  import HoodieProduct from '../components/HoodieProduct.vue'
-
   export default {
     name: 'App',
     components:{
-      HatProduct,
-      GaiterProduct,
-      SockProduct,
-      HoodieProduct
     },
     data () {
       return {
         image: image,
+         items: [
+        { id: 1, shortName: 'hat', name: 'Silver EMF Protective Hat/Beanie', picName: 'hat-pic.jpg', price: 9.99, description: 'This is a hat designed to be worn under any other hats. It is pure silver coated fabric that has a shielding efficiency of >55DB or more. It is EMF shielding and also has anti bacterial, conductive, healing and anti-radiation functions, which can help protect against 5G', size: ''},
+        { id: 2, shortName: 'socks', name: 'Silver Fibre Grounding Socks', picName: 'sock-pic.png', price: 19.99, description: 'I have been very fortunate to obtain a small stock of Grounding socks. Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons', size: '' },
+        { id: 3, shortName: 'hoodie', name: 'Ladies EMF Protective Hoodie', picName: 'hoodie-pic.jpg', price: 29.99, description: 'EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs. Comfortable, looks good, and will keep you protected.', size: '' },
+        { id: 4, shortName: 'gaiter', name: 'Silver EMF Protective Gaiter', picName: 'gaiter-pic.jpg', price: 29.99, description: 'This Multi purpose silver snood will keep those EMFs away this winter whilst protecting your Thyroid and keeping your neck warm. The larger fit can also be worn over your face if necessary and even over the head. Fabric is anti-viral and Anti-bacterial and helps with circulation not to mention how pretty it makes anyone look!', size: '' },
+        ],
+        cart: []
+      }
+    },
+    created() {
+      let cart = localStorage.getItem('cart');
+      if (cart) {
+          try {
+              this.cart = JSON.parse(cart);
+          } catch (error) {
+              console.error(error);
+              this.cart = [];
+          }
+      } else {
+          this.cart = [];
       }
     },
     methods: {
@@ -105,6 +79,20 @@
         } else {
           return false
         }
+      },
+      addToCart(product, size) {
+        console.log('added ' + product.name + ' with size ' + size)
+        product.size = size
+        this.cart.push(product)
+        localStorage.setItem('cart',  JSON.stringify(this.cart))
+      },
+      refreshCart() {
+        console.log('refreshed')
+        this.cart = []
+        window.localStorage.setItem('cart', [])
+      },
+      getImgUrl(pic) {
+        return require('../assets/'+ pic)
       }
     } 
   }
@@ -121,7 +109,8 @@
     display: grid;
     grid-template-columns:auto auto auto auto;
     background-color: #95c099;
-    padding: 3px;
+    padding: 0px;
+    z-index: 1;
   }
   .grid-item {
     background-color: #302e86;
@@ -129,7 +118,33 @@
     padding: 30px;
     font-size: 30px;
     text-align: center;
-    position:relative;
+    z-index: 1;
+  }
+  .inner-grid-item {
+    bottom: 0;
+  }
+  .sizes {
+    background-color: #302e86;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+    z-index: 1;
+  }
+  .clickable {
+    z-index: 999;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #a9b5b9;
   }
 
   @media only screen and (max-width: 1400px) {
@@ -166,6 +181,18 @@
     width: 100%;
     text-align: center;
     position:relative;
+  }
+
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    z-index: 0;
   }
 
   a {
@@ -205,6 +232,28 @@
     font-size: medium;
     color: #302e86;
     font-family: Avenir, Helvetica, Arial, sans-serif; position: relative;
+  }
+
+  h5 {
+    position: relative;
+  }
+
+  @media (min-width:700px) { 
+    .cart {
+      padding: 5px;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color:  rgb(214, 205, 205);
+      position: fixed;
+      top: 15%;
+      right: 5%;
+      width: 15%;
+      opacity: 80%;
+      transition: .10s ease;
+      z-index: 1000;
+      border-radius: 10%;
+    }
   }
 
   body {
