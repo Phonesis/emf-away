@@ -4,8 +4,17 @@
       <h4>I create clothing designed to help protect you and your family against the potentially harmful effects of EMF (Electric & Magnetic Fields) exposure. <br> <br> Here are some of my latest creations available to buy via my store or through Etsy (links will open in a new tab):</h4><br>
       <div class="cart">
         <div>Items in Cart: {{cart.length}}</div>
+        <div v-if="cart.length === 0">
+          <h6>(Cart is empty)</h6>
+        </div>  
+        <div v-else>
+          <div v-for="item in displayedItems" :key="item.name">
+             <h6>{{JSON.stringify(item).replace('"', "").replace('"', "")}}<br></h6>
+          </div>
+        </div>
+        <div>------</div>
         <div>Total: £{{ cart.reduce((totalPrice, item) => totalPrice + item.price, 0 ).toFixed(2)}}</div>
-        <button @click="refreshCart()">Refresh Cart</button>
+        <button @click="refreshCart()">Clear Cart</button>
         <h4>Checkout</h4><br>
       </div>
       <div class="grid-container">
@@ -56,20 +65,25 @@
         { id: 3, shortName: 'hoodie', name: 'Ladies EMF Protective Hoodie', picName: 'hoodie-pic.jpg', price: 29.99, description: 'EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs. Comfortable, looks good, and will keep you protected.', size: '' },
         { id: 4, shortName: 'gaiter', name: 'Silver EMF Protective Gaiter', picName: 'gaiter-pic.jpg', price: 29.99, description: 'This Multi purpose silver snood will keep those EMFs away this winter whilst protecting your Thyroid and keeping your neck warm. The larger fit can also be worn over your face if necessary and even over the head. Fabric is anti-viral and Anti-bacterial and helps with circulation not to mention how pretty it makes anyone look!', size: '' },
         ],
-        cart: []
+        cart: [],
+        displayedItems: []
       }
     },
     created() {
       let cart = localStorage.getItem('cart');
+      let displayedItems = localStorage.getItem('displayedItems');
       if (cart) {
           try {
-              this.cart = JSON.parse(cart);
+            this.cart = JSON.parse(cart);
+            this.displayedItems = JSON.parse(displayedItems);
           } catch (error) {
               console.error(error);
               this.cart = [];
+              this.displayedItems = [];
           }
       } else {
           this.cart = [];
+          this.displayedItems = [];
       }
     },
     methods: {
@@ -81,19 +95,40 @@
         }
       },
       addToCart(product, size) {
-        console.log('added ' + product.name + ' with size ' + size)
         product.size = size
+        let itemNameAndSize = product.name + ' - ' + product.size
+        console.log(itemNameAndSize)
         this.cart.push(product)
+        this.displayedItems.push(itemNameAndSize)
+        let itemCount = this.getArrayItemCount(this.displayedItems, itemNameAndSize)
+        console.log(itemCount)
+        if (itemCount > 1) {
+          this.displayedItems = this.displayedItems.filter(e => !e.includes(itemNameAndSize))
+          this.displayedItems.push(itemNameAndSize + ' ' + '(' + itemCount + ')')
+        }
         localStorage.setItem('cart',  JSON.stringify(this.cart))
+        localStorage.setItem('displayedItems',  JSON.stringify(this.displayedItems))
       },
       refreshCart() {
-        console.log('refreshed')
         this.cart = []
+        this.displayedItems = []
         window.localStorage.setItem('cart', [])
+        window.localStorage.setItem('displayedItems', [])
       },
       getImgUrl(pic) {
         return require('../assets/'+ pic)
-      }
+      },
+      getArrayItemCount(array, name) {
+        for (let index = 0; index < array.length; index++) {
+          if (JSON.stringify(array[index]).includes(name)) {
+            console.log(array)
+            const result = array.reduce((n, x) => n + (x.includes(name)), 0);
+            console.log('filter result was ' + result)
+            return result
+          }
+        }
+          return 0;
+        }
     } 
   }
 </script>
@@ -238,9 +273,18 @@
     position: relative;
   }
 
+  h6 {
+    font-size:x-small;
+    color: #302e86;
+    font-style: italic;
+    transition: .10s ease;
+    font-style: italic;
+    font-family: Avenir, Helvetica, Arial, sans-serif; position: relative;
+  }
+
   @media (min-width:700px) { 
     .cart {
-      padding: 5px;
+      padding: 10px;
       overflow: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -252,7 +296,7 @@
       opacity: 80%;
       transition: .10s ease;
       z-index: 1000;
-      border-radius: 10%;
+      border-radius: 15%;
     }
   }
 
