@@ -97,14 +97,20 @@
       addToCart(product, size) {
         product.size = size
         let itemNameAndSize = product.name + ' - ' + product.size
-        console.log(itemNameAndSize)
         this.cart.push(product)
         this.displayedItems.push(itemNameAndSize)
         let itemCount = this.getArrayItemCount(this.displayedItems, itemNameAndSize)
-        console.log(itemCount)
-        if (itemCount > 1) {
+        if (itemCount > 0) {
+          var existingItem = this.displayedItems.filter(e => e.includes(itemNameAndSize))
+          for(var i = 0; i < existingItem.length; i++) {
+            // removes all chars from value except for int
+            existingItem[i] = existingItem[i].replace(/\D/g, '')
+          }
+          // converts string char int to int
+          var currentQuantity = Number(existingItem[0])
+          currentQuantity++
           this.displayedItems = this.displayedItems.filter(e => !e.includes(itemNameAndSize))
-          this.displayedItems.push(itemNameAndSize + ' ' + '(' + itemCount + ')')
+          this.displayedItems.push(itemNameAndSize + ' (x' + currentQuantity + ')')
         }
         localStorage.setItem('cart',  JSON.stringify(this.cart))
         localStorage.setItem('displayedItems',  JSON.stringify(this.displayedItems))
@@ -121,9 +127,7 @@
       getArrayItemCount(array, name) {
         for (let index = 0; index < array.length; index++) {
           if (JSON.stringify(array[index]).includes(name)) {
-            console.log(array)
             const result = array.reduce((n, x) => n + (x.includes(name)), 0);
-            console.log('filter result was ' + result)
             return result
           }
         }
