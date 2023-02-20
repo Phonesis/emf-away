@@ -39,7 +39,7 @@
               <h2>Or</h2>
               <div class="container">
                   <div class="sock-link">
-                    <a href="http://www.google.com" class="button" title="View product on Etsy" target="_blank">Buy on Etsy</a>
+                    <a href="https://www.etsy.com/uk/shop/EMFAWAY" class="button" title="View product on Etsy" target="_blank">Buy on Etsy</a>
                 </div><br>
               </div>
             </h5>
