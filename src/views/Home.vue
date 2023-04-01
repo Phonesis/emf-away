@@ -13,7 +13,7 @@
           </div>
         </div>
         <div>------</div>
-        <div>Total: £{{ cart.reduce((totalPrice, item) => totalPrice + item.price, 0 ).toFixed(2)}}</div>
+        <div>Total: £{{ cart.reduce((totalPrice, item) => totalPrice + parseInt(item.price), 0 ).toFixed(2)}}</div>
         <button @click="refreshCart()">Clear Cart</button>
         <h4>Checkout</h4><br>
       </div>
@@ -60,10 +60,10 @@
       return {
         image: image,
          items: [
-        { id: 1, shortName: 'hat', name: 'Silver EMF Protective Hat/Beanie', picName: 'hat-pic.jpg', price: 9.99, description: 'This is a hat designed to be worn under any other hats. It is pure silver coated fabric that has a shielding efficiency of >55DB or more. It is EMF shielding and also has anti bacterial, conductive, healing and anti-radiation functions, which can help protect against 5G', size: ''},
-        { id: 2, shortName: 'socks', name: 'Silver Fibre Grounding Socks', picName: 'sock-pic.png', price: 19.99, description: 'I have been very fortunate to obtain a small stock of Grounding socks. Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons', size: '' },
-        { id: 3, shortName: 'hoodie', name: 'Ladies EMF Protective Hoodie', picName: 'hoodie-pic.jpg', price: 29.99, description: 'EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs. Comfortable, looks good, and will keep you protected.', size: '' },
-        { id: 4, shortName: 'gaiter', name: 'Silver EMF Protective Gaiter', picName: 'gaiter-pic.jpg', price: 29.99, description: 'This Multi purpose silver snood will keep those EMFs away this winter whilst protecting your Thyroid and keeping your neck warm. The larger fit can also be worn over your face if necessary and even over the head. Fabric is anti-viral and Anti-bacterial and helps with circulation not to mention how pretty it makes anyone look!', size: '' },
+        { id: 1, shortName: 'hat', name: 'Silver EMF Protective Hat/Beanie', picName: 'hat-pic.jpg', price: '48.00', description: 'This is a hat designed to be worn under any other hats. It is pure silver coated fabric that has a shielding efficiency of >55DB or more. It is EMF shielding and also has anti bacterial, conductive, healing and anti-radiation functions, which can help protect against 5G', size: ''},
+        { id: 2, shortName: 'socks', name: 'Silver Fibre Grounding Socks', picName: 'sock-pic.png', price: '24.00', description: 'I have been very fortunate to obtain a small stock of Grounding socks. Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons', size: '' },
+        { id: 3, shortName: 'hoodie', name: 'Ladies EMF Protective Hoodie', picName: 'hoodie-pic.jpg', price: '155.00', description: 'EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs. Comfortable, looks good, and will keep you protected.', size: '' },
+        { id: 4, shortName: 'gaiter', name: 'Silver EMF Protective Gaiter', picName: 'gaiter-pic.jpg', price: '39.00', description: 'This Multi purpose silver snood will keep those EMFs away this winter whilst protecting your Thyroid and keeping your neck warm. The larger fit can also be worn over your face if necessary and even over the head. Fabric is anti-viral and Anti-bacterial and helps with circulation not to mention how pretty it makes anyone look!', size: '' },
         ],
         cart: [],
         displayedItems: []
