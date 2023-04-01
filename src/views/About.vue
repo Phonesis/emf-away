@@ -5,6 +5,8 @@
       <h1>My name is Julia and I create protective silver based clothing to help shield you against harmful EMFs (Electric & Magnetic Fields) <br> <br> I am a fiber artist and textile designer/maker, based in the South of England. 💜☀️</h1><br>
       <img class="mail-icon" :src="mailIcon" alt="Mail"/>
       <a href="mailto:emf-away@hotmail.com?subject=EMF Away query">Got a query, email me</a><br><br><br>
+        <h1>Useful Links:</h1><br>
+        <a href="https://rfinfo.co.uk/" title="Inform yourself about radiofrequency microwave radiation" target="_blank">RF Info</a> - Inform yourself about radiofrequency microwave radiation<br><br><br>
     </main>
   </div>
 

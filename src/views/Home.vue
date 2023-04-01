@@ -7,7 +7,7 @@
           <div class="grid-item"> 
             <HatProduct 
               productName="Silver EMF Protective Hat/Beanie" 
-              price="£39 / $52" 
+              price="£48.00" 
               link="https://www.etsy.com/uk/listing/1070907542/silver-emf-protective-hat?click_key=68580ea1f31826d3efe634c8a28f8f63f8ea3344%3A1070907542&click_sum=ec70b4d0&ref=shop_home_active_1&frs=1&sca=1"
             />
             <h3>This is a hat designed to be worn under any other hats. It is pure silver coated fabric that has a shielding efficiency of >55DB or more.<br><br> It is EMF shielding and also has anti bacterial, conductive, healing and anti-radiation functions, which can help protect against 5G.</h3>
@@ -15,7 +15,7 @@
           <div class="grid-item"> 
             <GaiterProduct 
               productName="Silver EMF Protective Gaiter" 
-              price="£29 / $38" 
+              price="£39.00" 
               link="https://www.etsy.com/uk/listing/1108536877/silver-emf-protective-gaiter?click_key=3d95a2e07a3b2e28930259690037a5537ba90dfc%3A1108536877&click_sum=67a3754a&ref=shop_home_recs_2&frs=1&sca=1"
             />
           <h3>This Multi purpose silver snood will keep those EMFs away this winter whilst protecting your Thyroid and keeping your neck warm. <br><br> We love this Silver snood. The larger fit can also be worn over your face if necessary and even over the head. Fabric is anti-viral and Anti-bacterial and helps with circulation not to mention how pretty it makes anyone look!</h3>
@@ -23,7 +23,7 @@
           <div class="grid-item"> 
             <SockProduct 
               productName="Silver Fibre Grounding Socks" 
-              price="£24 / $32" 
+              price="£24.00" 
               link="https://www.etsy.com/uk/listing/1108605007/26-pure-silver-fibre-grounding-socks?click_key=582545ea6ea46a19e0dd1179b5460806a2de0d95%3A1108605007&click_sum=7f701372&ref=shop_home_recs_3&frs=1&cns=1"
             />
           <h3>I have been very fortunate to obtain a small stock of Grounding socks. <br> <br> Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons.</h3>
@@ -31,7 +31,7 @@
           <div class="grid-item"> 
             <HoodieProduct Zip
               productName="Ladies EMF Protective Hoodie" 
-              price="£145 / $196" 
+              price="£155.00" 
               link="https://www.etsy.com/uk/listing/1173926627/ladies-emf-protective-black-zip-hoodie?click_key=f1665214fac158dcc590965e0c71e775e040c586%3A1173926627&click_sum=97c7b758&ref=shop_home_recs_4"
             />
           <h3>EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs.<br><br> Comfortable, looks good, and will keep you protected.<br></h3>
@@ -43,7 +43,7 @@
           <div class="grid-item-mob"> 
             <HatProduct 
               productName="Silver EMF Protective Hat/Beanie" 
-              price="£39 / $52" 
+              price="£48.00" 
               link="https://www.etsy.com/uk/listing/1070907542/silver-emf-protective-hat?click_key=68580ea1f31826d3efe634c8a28f8f63f8ea3344%3A1070907542&click_sum=ec70b4d0&ref=shop_home_active_1&frs=1&sca=1"
             />
             <h3>This is a hat designed to be worn under any other hats. It is pure silver coated fabric that has a shielding efficiency of >55DB or more.<br><br> It is EMF shielding and also has anti bacterial, conductive, healing and anti-radiation functions, which can help protect against 5G.</h3>
@@ -51,7 +51,7 @@
           <div class="grid-item-mob"> 
             <GaiterProduct 
               productName="Silver EMF Protective Gaiter" 
-              price="£29 / $38" 
+              price="£39.00" 
               link="https://www.etsy.com/uk/listing/1108536877/silver-emf-protective-gaiter?click_key=3d95a2e07a3b2e28930259690037a5537ba90dfc%3A1108536877&click_sum=67a3754a&ref=shop_home_recs_2&frs=1&sca=1"
             />
           <h3>This Multi purpose silver snood will keep those EMFs away this winter whilst protecting your Thyroid and keeping your neck warm. <br><br> We love this Silver snood. The larger fit can also be worn over your face if necessary and even over the head. Fabric is anti-viral and Anti-bacterial and helps with circulation not to mention how pretty it makes anyone look!</h3>
@@ -59,7 +59,7 @@
           <div class="grid-item-mob"> 
             <SockProduct 
               productName="Silver Fibre Grounding Socks" 
-              price="£24 / $32" 
+              price="£24.00" 
               link="https://www.etsy.com/uk/listing/1108605007/26-pure-silver-fibre-grounding-socks?click_key=582545ea6ea46a19e0dd1179b5460806a2de0d95%3A1108605007&click_sum=7f701372&ref=shop_home_recs_3&frs=1&cns=1"
             />
           <h3>I have been very fortunate to obtain a small stock of Grounding socks. <br> <br> Grounding in nature is essential for our wellbeing and health. Also known as earthing, it allows you to channel natural energy through direct bodily contact with the planet surface and helps replenish diminished electrons.</h3>
@@ -67,7 +67,7 @@
           <div class="grid-item-mob"> 
             <HoodieProduct 
               productName="Ladies EMF Protective Hoodie" 
-              price="£145 / $196" 
+              price="£155.00" 
               link="https://www.etsy.com/uk/listing/1173926627/ladies-emf-protective-black-zip-hoodie?click_key=f1665214fac158dcc590965e0c71e775e040c586%3A1173926627&click_sum=97c7b758&ref=shop_home_recs_4"
             />
           <h3>EMF protective armour. Black and silver multilayered knit hoodie. Will protect from all EMFs.<br><br> Comfortable, looks good, and will keep you protected.<br></h3>
